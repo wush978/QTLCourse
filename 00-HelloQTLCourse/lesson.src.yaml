@@ -1,0 +1,77 @@
+- Class: meta
+  Course: QTLCourse
+  Lesson: 00-Hello-QTLCourse
+  Author: Wush Wu
+  Type: Standard
+  Organization: Taiwan R User Group
+  Version: 0.1
+
+- Class: text
+  Output: |
+    讀到這段中文字的同學，請直接輸入enter進入課程。
+    If you are windows user and you cannot read the chinese characters, please
+    press `ESC` to exit swirl and execute the command `Sys.setlocale(locale = "cht")`.
+
+- Class: text
+  Output: |
+    本課程的目的是為了測試同學的環境是否正常，能否進行本教材。
+    完成測試之後，會進一步說明本教材的部分功能，
+    在課程進行中，如果看到格式如：`...`的部分，代表該部分是一個說明關卡。
+    上述說明文字閱讀完畢後，請輸入enter進入下一個關卡。
+
+- Class: text
+  Output: |
+    課程進行時，會請同學在R 的console（即開頭為`>`的區塊）中輸入指令。
+    而需要輸入的程式碼，則會在內容兩端用``符號來包覆。
+
+- Class: cmd_question
+  Output: |
+    本關卡會檢查swirl的套件版本。這是一個需要輸入指令來過關的關卡，請在螢幕上輸入：`skip()`進行過關。
+    如果版本需要更新，請同學重新啟動R後，輸入：`source("http://wush978.github.io/R/init-swirl.R")`更新swirl套件以及課程內容。
+  CorrectAnswer: packageVersion("swirl")
+  AnswerTests: check_version()
+
+- Class: text
+  Output: |
+    課程中，可以輸入`skip()`來看答案並跳過卡住的關卡。
+    若是變數已經受到污染，以至於上述方式無法跳過關卡時，請改為輸入：`swirl()`以接續進行下一關。
+    有時需要重新開啟R，載入swirl套件後，輸入`swirl()`接續下一關。
+    如果上述方法嘗試之後仍然無法排除，請求助。
+
+- Class: script
+  Output: |
+    請確認Rstudio是否開啟名稱為「test-script.R」的檔案，並且已經顯示：「# 這是測試功能的檔案」等字眼。
+    如果無法看到中文，請依序點選Rstudio左上角的File -> Reopen With Encoding... -> 選取：UTF-8。
+    使用Windows的同學，如果打開的檔案後無法看到文字，請改由使用非中文的使用者帳號進行課程。
+    （針對此問題，目前尚沒有更好的解決方法，麻煩遇到此問題的同學切換帳號後，繼續進行課程）
+  Script: test-script.R
+  AnswerTests: check_version()
+
+- Class: text
+  Output: |
+    上述關卡中輸入的`skip()`與`submit()`皆屬於swirl的指令。接著我們介紹：`play()`。
+    在課程進行中，若同學想要自由摸索嘗試的話，可以輸入`play()`來暫時中止swirl。
+    需要回到課程的話，則是輸入：`nxt()`返回課程。
+
+- Class: text
+  Output: |
+    輸入`bye()`則可以離開swirl環境。離開後，只要輸入`swirl()`即可選擇接關，繼續挑戰
+    離開前的進度。
+
+- Class: text
+  Output: |
+    需要繳交作業的同學，請在完成每個單元後確認是否看到訊息如下：「You've reached the end
+    of this lesson! Returning to the main menu... Your status has beed updated
+    to tracking server」。出現上述訊息之後，代表同學完成課程的進度已經被確實記錄，
+    並且成功轉交給同學的老師。因此，建議需要繳交作業的同學，請確認在有網路連線的狀
+    態下完成作業。
+
+- Class: text
+  Output: |
+    需要確認進度的同學，也可以輸入：`my_progress()`來查詢目前你登入的使用者所完成的單元。
+    此部分也會提供給有合作的老師們，以進行作業紀錄。
+
+- Class: text
+  Output: |
+    測試與說明已經完成，請同學回到選單選擇你想進行的課程。需要交作業的同學，
+    請於此測試課程結束後，留意是否出現訊息如下：「Your status has beed updated to tracking server」。
