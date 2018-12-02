@@ -1,0 +1,5 @@
+options(editor = function(file, title){})
+library(swirlify)
+set_lesson(file.path(getwd(), '00-Hello-QTLCourse', 'lesson.yaml'))
+source('https://raw.githubusercontent.com/wush978/R/gh-pages/transform.R')
+transform_all()
